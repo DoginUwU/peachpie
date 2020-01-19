@@ -32,7 +32,7 @@ do
     continue;
   fi
 
-  PHP_OUTPUT="$(php -d display_errors=Off -d log_errors=Off $PHP_FILE)"
+  PHP_OUTPUT="$(php $PHP_FILE)"
   PEACH_OUTPUT="$(dotnet $OUTPUT_DIR/Tests.dll dummyArg $PHP_FILE_REL)"
 
   if [ "$PHP_OUTPUT" = "$PEACH_OUTPUT" ] ; then
