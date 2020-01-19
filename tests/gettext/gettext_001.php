@@ -22,7 +22,8 @@ function translate() {
 function test($locale, $domain, $dir) {
   if ($locale) {
     putenv("LC_ALL=" . $locale);
-    setlocale(LC_ALL, $locale);
+    echo setlocale(LC_ALL, $locale);
+    echo " ";
   }
 
   if ($dir) {

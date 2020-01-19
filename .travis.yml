@@ -3,6 +3,11 @@ dist: xenial
 language: php
 php:
   - '7.3'
+addons:
+  apt:
+    packages:
+      - language-pack-cs
+      - language-pack-sk
 
 before_install:
   - ./build/install_dependencies_ubuntu.sh
