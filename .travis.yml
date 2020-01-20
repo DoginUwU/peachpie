@@ -6,10 +6,13 @@ php:
 addons:
   apt:
     packages:
+      - locales
+      - locales-all
       - language-pack-cs
       - language-pack-sk
 
 before_install:
+  - locale -a
   - ./build/install_dependencies_ubuntu.sh
 #  - echo "extension=sqlite3.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 #  - echo "extension=pdo_sqlite.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
