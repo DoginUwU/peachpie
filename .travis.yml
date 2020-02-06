@@ -2,14 +2,11 @@ sudo: required
 dist: xenial
 language: php
 php:
-  - '7.4'
+  - '7.3'
 addons:
   apt:
     packages:
-      - locales
-      - locales-all
       - language-pack-cs
-      - language-pack-sk
 
 before_install:
   - locale -a
